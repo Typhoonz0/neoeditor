@@ -1,5 +1,5 @@
 #------------
-#neoeditor - a WINDOWS ONLY terminal based text editor written in 420 lines of code
+#neoeditor - a WINDOWS ONLY terminal based text editor
 #------------
 from os import system
 import os
@@ -46,7 +46,7 @@ if we == "0xd76df8":
     /_/ /_/\___/\____/\___/\__,_/  /_/  \__/ \____//_/                                                                    
                 [by xliam1 on discord]
     """, Colors.green, interval=0.000)
-    Write.Print(f"\nn = new | e = edit | o = overwrite | h = help | s = settings\n", Colors.green, interval=0.000)
+    Write.Print(f"\nn = new | e = edit | o = overwrite | d = delete | h = help | s = settings \n", Colors.green, interval=0.000)
     mainmenutop = Write.Input(f"$ ", Colors.green, interval=0.000)
     if mainmenutop == "n":
         filename = Write.Input(f"what should the file name be?\n$ ", Colors.green, interval=0.000)
@@ -163,6 +163,19 @@ if we == "0xd76df8":
         Write.Print(f"\n\ntype e in the main menu, paste in your file path\nand make sure it's formatted properly.\nedit your file, type -sq and your file will save", Colors.green, interval=0.000)
         Write.Print(f"\n\ntype o in the main menu, paste in your file path\nand start over writing. then, type -sq to save", Colors.green, interval=0.000)
         mainmenutop = Write.Input(f"\n\n\nn = new | e = edit | o = overwrite | h = help\n$ ", Colors.green, interval=0.000)
+    
+    if mainmenutop == "d":
+        system("cls")
+        dele = Write.Input(f"\nwhich file do you want to delete?", Colors.cyan, interval=0.000)
+        os.remove(dele)
+        Write.Print(f"\nFile was deleted.", Colors.cyan, interval=0.000)
+
+        x = Write.Input(f"\nPress ENTER to save, then, restart the program", Colors.cyan, interval=0.000)
+        if x == "":
+            print("restart program")
+        else:
+            print("restart program")
+
 
 # WHIT ONLY THEM
 if we == "0xe37db5":
@@ -174,7 +187,7 @@ if we == "0xe37db5":
     /_/ /_/\___/\____/\___/\__,_/  /_/  \__/ \____//_/                                                                    
                 [by xliam1 on discord]
     """, Colors.white, interval=0.000)
-    Write.Print(f"\nn = new | e = edit | o = overwrite | h = help | s = settings\n", Colors.white, interval=0.000)
+    Write.Print(f"\nn = new | e = edit | o = overwrite | d = delete | h = help | s = settings\n", Colors.white, interval=0.000)
     mainmenutop = Write.Input(f"$ ", Colors.white, interval=0.000)
     if mainmenutop == "n":
         filename = Write.Input(f"what should the file name be?\n$ ", Colors.white, interval=0.000)
@@ -292,6 +305,17 @@ if we == "0xe37db5":
         Write.Print(f"\n\ntype o in the main menu, paste in your file path\nand start over writing. then, type -sq to save", Colors.white, interval=0.000)
         mainmenutop = Write.Input(f"\n\n\nn = new | e = edit | o = overwrite | h = help\n$ ", Colors.white, interval=0.000)
 
+    if mainmenutop == "d":
+        system("cls")
+        dele = Write.Input(f"\nwhich file do you want to delete?", Colors.white, interval=0.000)
+        os.remove(dele)
+        Write.Print(f"File was deleted. ", Colors.white, interval=0.000)
+        x = input("Press ENTER to continue")
+        if x == "":
+            print("restart program")
+        else:
+            print("restart program")
+
 if we == "0xe7aefc":
     Write.Print(f"""
                         __________________              
@@ -301,7 +325,7 @@ if we == "0xe7aefc":
     /_/ /_/\___/\____/\___/\__,_/  /_/  \__/ \____//_/                                                                    
                 [by xliam1 on discord]
     """, Colors.cyan, interval=0.000)
-    Write.Print(f"\nn = new | e = edit | o = overwrite | h = help | s = settings\n", Colors.cyan, interval=0.000)
+    Write.Print(f"\nn = new | e = edit | o = overwrite | d = delete | h = help | s = settings\n", Colors.cyan, interval=0.000)
     mainmenutop = Write.Input(f"$ ", Colors.cyan, interval=0.000)
     if mainmenutop == "n":
         filename = Write.Input(f"what should the file name be?\n$ ", Colors.cyan, interval=0.000)
@@ -418,3 +442,15 @@ if we == "0xe7aefc":
         Write.Print(f"\n\ntype e in the main menu, paste in your file path\nand make sure it's formatted properly.\nedit your file, type -sq and your file will save", Colors.cyan, interval=0.000)
         Write.Print(f"\n\ntype o in the main menu, paste in your file path\nand start over writing. then, type -sq to save", Colors.cyan, interval=0.000)
         mainmenutop = Write.Input(f"\n\n\nn = new | e = edit | o = overwrite | h = help\n$ ", Colors.cyan, interval=0.000)
+
+        if mainmenutop == "d":
+            system("cls")
+            dele = Write.Input(f"\nwhich file do you want to delete?", Colors.cyan, interval=0.000)
+            os.remove(dele)
+            Write.Print(f"\nFile was deleted.", Colors.cyan, interval=0.000)
+
+            x = Write.Input(f"\nPress ENTER to save, then, restart the program", Colors.cyan, interval=0.000)
+            if x == "":
+                print("restart program")
+            else:
+                print("restart program")
