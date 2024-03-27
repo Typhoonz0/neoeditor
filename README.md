@@ -9,6 +9,7 @@ python 3.9
 
 # installation
 download from the "releases" tab
+
 change the file path in line 10 of the program to where you want to save the config file, and thats it!
 thanks for considering neoeditor
 
