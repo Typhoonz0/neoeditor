@@ -4,7 +4,7 @@ uses the windows terminal to display and write text
 3 cool themes with more to come
 
 # prerequisites
-python 3.9
+python 3.9 and 
 .py files set to open in "python.exe"
 
 # installation
