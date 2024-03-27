@@ -1,5 +1,5 @@
 #------------
-#neoeditor - a WINDOWS ONLY terminal based text editor
+#neoeditor - a WINDOWS ONLY terminal based text editor written in 420 lines of code
 #------------
 from os import system
 import os
@@ -21,6 +21,7 @@ if isExisting == False:
             file.writelines("4321")
         if writing == "3":
             file.writelines("5678")
+        input("remember, always type h for help in the main menu,\nremember that you copy the newly created file's name on quit,\nand always remember that you can just type the file name\nin the edit or overwrite menu, without the path or anything.\nPress ENTER to continue.")
         x = input("Press ENTER to save, then, restart the program")
         if x == "":
             print("restart program")
@@ -32,6 +33,7 @@ else:
         v = fp.read()
     v = codecs.decode(v,'base64')
     v = codecs.encode(v, 'hex')
+    # if you see this as an error, delete the newly created file in "path1" and start again.
     v = int(v, 16)
     we = (hex(v))
 
@@ -70,7 +72,7 @@ if we == "0xd76df8":
 
 
     if mainmenutop == "e":
-        file_path = Write.Input(f"paste the desired file's path without quotes or two backslashes:\n$ ", Colors.green, interval=0.000)
+        file_path = Write.Input(f"paste the desired file's name\n$ ", Colors.green, interval=0.000)
         system('cls')
         Write.Print(f"\nEditing: {file_path}\n", Colors.green, interval=0.000)
         Write.Print(f"to quit, type -sq on a new line\n\n", Colors.green, interval=0.000)
@@ -100,7 +102,7 @@ if we == "0xd76df8":
                 time.sleep(1)
 
     if mainmenutop == "o":
-        file_path = Write.Input(f"paste the desired file's path without quotes or two backslashes:\n$ ", Colors.green, interval=0.000)
+        file_path = Write.Input(f"paste the desired file's path name\n$ ", Colors.green, interval=0.000)
         system('cls')
         Write.Print(f"\nOverwriting: {file_path}\n", Colors.green, interval=0.000)
         Write.Print(f"to quit, type -sq on a new line\n\n", Colors.green, interval=0.000)
@@ -198,7 +200,7 @@ if we == "0xe37db5":
 
 
     if mainmenutop == "e":
-        file_path = Write.Input(f"paste the desired file's path without quotes or two backslashes:\n$ ", Colors.white, interval=0.000)
+        file_path = Write.Input(f"paste the desired file's name:\n$ ", Colors.white, interval=0.000)
         system('cls')
         Write.Print(f"\nEditing: {file_path}\n", Colors.white, interval=0.000)
         Write.Print(f"to quit, type -sq on a new line\n\n", Colors.white, interval=0.000)
@@ -228,7 +230,7 @@ if we == "0xe37db5":
                 time.sleep(1)
 
     if mainmenutop == "o":
-        file_path = Write.Input(f"paste the desired file's path without quotes or two backslashes:\n$ ", Colors.white, interval=0.000)
+        file_path = Write.Input(f"paste the desired file's name:\n$ ", Colors.white, interval=0.000)
         system('cls')
         Write.Print(f"\nOverwriting: {file_path}\n", Colors.white, interval=0.000)
         Write.Print(f"to quit, type -sq on a new line\n\n", Colors.white, interval=0.000)
@@ -325,7 +327,7 @@ if we == "0xe7aefc":
 
 
     if mainmenutop == "e":
-        file_path = Write.Input(f"paste the desired file's path without quotes or two backslashes:\n$ ", Colors.cyan, interval=0.000)
+        file_path = Write.Input(f"paste the desired file's name:\n$ ", Colors.cyan, interval=0.000)
         system('cls')
         Write.Print(f"\nEditing: {file_path}\n", Colors.cyan, interval=0.000)
         Write.Print(f"to quit, type -sq on a new line\n\n", Colors.cyan, interval=0.000)
@@ -355,7 +357,7 @@ if we == "0xe7aefc":
                 time.sleep(1)
 
     if mainmenutop == "o":
-        file_path = Write.Input(f"paste the desired file's path without quotes or two backslashes:\n$ ", Colors.white, interval=0.000)
+        file_path = Write.Input(f"paste the desired file's name:\n$ ", Colors.white, interval=0.000)
         system('cls')
         Write.Print(f"\nOverwriting: {file_path}\n", Colors.cyan, interval=0.000)
         Write.Print(f"to quit, type -sq on a new line\n\n", Colors.cyan, interval=0.000)
