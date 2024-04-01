@@ -1,3 +1,4 @@
+![image](https://github.com/Typhoonz0/neoeditor/assets/122064502/8a48342d-bc2e-417d-86ec-13208f99d436)
 # neoeditor
 the coolest windows terminal based text editor
 uses the windows terminal to display and write text
