@@ -10,8 +10,7 @@ python 3.9 and
 
 # installation
 download from the "releases" tab
-
-change the file path in line 10 of the program to where you want to save the config file, and thats it!
+run *pip install pystyle*
 thanks for considering neoeditor
 
 # remember!!!!
