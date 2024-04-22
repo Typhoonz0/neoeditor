@@ -24,6 +24,7 @@ download from the "releases" tab
 - run in terminal:
 -  *pip install pystyle*
 -  *pip install pyperclip*
+  
 thanks for considering neoeditor
 
 # remember!!!!
