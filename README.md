@@ -3,7 +3,8 @@
 # neoeditor
 the coolest windows terminal based text editor
 uses the windows terminal to display and write text
-3 cool themes with more to come
+
+5 cool themes with more to come
 
 # changelog
 v1.1.1:
