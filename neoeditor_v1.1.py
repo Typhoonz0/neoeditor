@@ -7,12 +7,12 @@ from pystyle import Write, Colors
 import pystyle
 import time
 import pyperclip
-
+from pathlib import Path
 def print_styled(message):
     theme = read_theme()
     if theme == 'white' or theme == '':
         print(message)
-    elif theme in ['blue', 'green', 'red']:
+    elif theme in ['blue', 'green', 'red', 'cyan']:
         color = getattr(pystyle.Colors, theme.lower())
         print(f"{color}{message}")
 
@@ -58,25 +58,36 @@ def main():
                 time.sleep(0.5)
                 print_styled(f"Saved.")
                 time.sleep(1)
-                main()
+                
 
 
     if mainmenutop == "e":
-        file_path = input(f"paste the desired file's name\n$ ")
+        system("cls")
+        cwd = os.path.dirname(os.path.abspath(__file__))
+        print(f"Files in: {cwd} ")
+        arr = os.listdir(cwd)
+        print(*arr, sep='\n')
+
+        file_path = input(f"select a file:\n$ ")
         system('cls')
         print_styled(f"\nEditing: {file_path}\n")
         print_styled(f"to quit, type -sq on a new line\n\n")
         print_styled(f"Current File Contents:\n")
-        with open(file_path, 'r') as file:
-            for line in file:
-                print("/", line.strip())
+        try:
+            with open(file_path, 'r') as file:
+                for line in file:
+                    print("/", line.strip())
+        except:
+            print("couldn't open file\nthe file may have no contents\ntry restarting neoeditor")
+            system("pause")
+            main()
         
         with open(file_path, "a") as file:
             input(f"Hit ENTER to start writing new content:\n")
-            writing = input(f"/ ", Colors.white, interval=0.000)
+            writing = input(f"/ ")
             while writing != "-sq":
                 file.writelines(writing+"\n")
-                writing = input(f"/ ", Colors.white, interval=0.000)
+                writing = input(f"/ ")
             if writing == "-sq":
                 print_styled(f"Saving.")
                 time.sleep(1.5)
@@ -90,9 +101,14 @@ def main():
                 time.sleep(0.5)
                 print_styled(f"\nSaved.")
                 time.sleep(1)
-                main()
+                
 
     if mainmenutop == "o":
+        print("Files:")
+        print("invalid")
+        arr = os.listdir()
+        print(*arr, sep='\n')
+
         file_path = input(f"paste the desired file's path name\n$ ")
         system('cls')
         print_styled(f"\nOverwriting: {file_path}\n")
@@ -104,10 +120,10 @@ def main():
         
         with open(file_path, "w") as file:
             input(f"Hit ENTER to start writing new content:\n")
-            writing = input(f"/ ", Colors.white, interval=0.000)
+            writing = input(f"/ ")
             while writing != "-sq":
                 file.writelines(writing+"\n")
-                writing = input(f"/ ", Colors.white, interval=0.000)
+                writing = input(f"/ ")
             if writing == "-sq":
                 pyperclip.copy(filenahame)
                 print_styled(f"Saving. File path copied to clipboard.")
@@ -122,7 +138,7 @@ def main():
                 time.sleep(0.5)
                 print_styled(f"\nSaved.")
                 time.sleep(1)
-                main()
+                
 
     if mainmenutop == "s":
         theme_choice = input("Enter theme (blue, green, red, white, cyan) > ").lower()
