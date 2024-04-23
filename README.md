@@ -1,4 +1,5 @@
-![image](https://github.com/Typhoonz0/neoeditor/assets/122064502/5b17b8d1-678c-4c12-8841-6eba37d0cb04)
+![image](https://github.com/Typhoonz0/neoeditor/assets/122064502/367a35a1-70cc-424b-8b68-e3d16f0bda97)
+
 
 # neoeditor
 the coolest windows terminal based text editor
