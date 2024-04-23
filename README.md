@@ -3,7 +3,10 @@
 
 # neoeditor
 the coolest windows terminal based text editor
+
 uses the windows terminal to display and write text
+
+it can only create text files but can edit or over write any file that can be edited in a text editor
 
 5 cool themes with more to come
 
